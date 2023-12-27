@@ -72,6 +72,21 @@ using IModel channel = connection.CreateModel();
 
 #endregion
 
+#region Request Response Message Design
+//string queueName = "example-request-response-queue";
+//channel.QueueDeclare(queue: queueName, durable: false, exclusive: false, autoDelete: false);
+//string replyQueueName = channel.QueueDeclare().QueueName;
 
-
+//EventingBasicConsumer consumer = new(channel);
+//channel.BasicConsume(queue: replyQueueName, autoAck: true, consumer: consumer );
+//consumer.Received += async (sender, e) =>
+//{
+//    Console.WriteLine(Encoding.UTF8.GetString(e.Body.Span));
+//    byte[] responseMessage = Encoding.UTF8.GetBytes("Process Done!");  
+//    IBasicProperties properties = e.BasicProperties;
+//    IBasicProperties replyProperties = channel.CreateBasicProperties();
+//    replyProperties.CorrelationId = properties.CorrelationId;
+//    channel.BasicPublish(exchange: string.Empty, routingKey: properties.ReplyTo, basicProperties: replyProperties, body: responseMessage);
+//};
+#endregion
 Console.Read();
