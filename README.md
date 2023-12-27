@@ -1,4 +1,4 @@
-1.P2P (Point to Point) Design: Message design sends messages directly to the queue and they are consumed by the consumer who subscribes to the queue. This design is often used with Direct Exchange.
-2. Publish/Subscribe Message Design: The publisher sends the message via the exchange to all consumers who subscribe . This design is often used with Fanout Exchange.
-3. Work Queue Message Design : A message published by the publisher is intended to be consumed by only one of multiple consumers. Thus, all consumers have the same workload in the process of processing messages. This design is often used with Topic Exchange.
-4. Request Response Message Design : In this design, the publisher sends a message to the queue as if making a request and waits for a response from another queue regarding the result from the consumer who consumes this message.
+<li> P2P (Point to Point) Design: Message design sends messages directly to the queue and they are consumed by the consumer who subscribes to the queue. This design is often used with Direct Exchange.  </li> <br>
+<li> Publish/Subscribe Message Design: The publisher sends the message via the exchange to all consumers who subscribe . This design is often used with Fanout Exchange.</li><br> 
+<li>Work Queue Message Design : A message published by the publisher is intended to be consumed by only one of multiple consumers. Thus, all consumers have the same workload in the process of processing messages. This design is often used with Topic Exchange.</li><br> 
+<li>Request Response Message Design : In this design, the publisher sends a message to the queue as if making a request and waits for a response from another queue regarding the result from the consumer who consumes this message. </li> 
