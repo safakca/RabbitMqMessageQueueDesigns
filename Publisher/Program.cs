@@ -60,6 +60,24 @@ using IModel channel = connection.CreateModel();
 
 #endregion
 
+#region Request Message Design
+//string queueName = "example-request-response-queue";
+//channel.QueueDeclare(queue: queueName, durable: false, exclusive: false, autoDelete: false);
+//string replyQueueName = channel.QueueDeclare().QueueName;
+//string correlationId = Guid.NewGuid().ToString();
+//IBasicProperties properties = channel.CreateBasicProperties();
+//properties.CorrelationId= correlationId;
+//properties.ReplyTo = replyQueueName;
+//byte[] body= Encoding.UTF8.GetBytes($"Request Message");
+//channel.BasicPublish(exchange: string.Empty, routingKey: queueName, body: body, basicProperties: properties);
 
+//EventingBasicConsumer consumer = new(channel);
+//channel.BasicConsume(queue: replyQueueName, autoAck: true, consumer: consumer );
+//consumer.Received += async (sender, e) =>
+//{
+//    if(e.BasicProperties.CorrelationId == correlationId)
+//      Console.WriteLine($"Response= {Encoding.UTF8.GetString(e.Body.Span)}");
+//};
+#endregion
 
 Console.Read();
